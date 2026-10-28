@@ -156,9 +156,43 @@ footer .credit a{color:var(--sun)}
   .hero .wrap{min-height:0;padding-top:56px;padding-bottom:56px}
   nav a.cta{margin-left:0}
 }
+
+.menu-btn{display:none}
+@media (max-width:900px){
+  .js .menu-btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border:2px solid var(--navy);border-radius:999px;background:#fff;color:var(--ink);font:700 17px "Open Sans",system-ui,sans-serif;cursor:pointer;margin-left:auto}
+  .js .menu-btn[hidden]{display:inline-flex}
+  .menu-btn .bars{width:18px;height:2px;background:var(--ink);box-shadow:0 -6px 0 var(--ink),0 6px 0 var(--ink);transition:box-shadow .2s,transform .2s}
+  .menu-btn[aria-expanded=true]{background:var(--navy);color:#fff}
+  .menu-btn[aria-expanded=true] .bars{background:#fff;box-shadow:none;transform:rotate(45deg)}
+  .menu-btn[aria-expanded=true] .bars::after{content:"";display:block;width:18px;height:2px;background:#fff;transform:rotate(90deg)}
+  .js nav{display:none;flex:1 1 100%;margin-left:0;padding:0;order:3}
+  .js nav.open{display:block}
+  .js nav ul{flex-direction:column;align-items:stretch;gap:0;padding:4px 0 8px;border-top:1px solid #DCE5FA}
+  .js nav li{border-bottom:1px solid #EEF2FC}
+  .js nav a{display:block;padding:15px 8px;font-size:18px;border-radius:12px}
+  .js nav a.cta{margin:14px 0 4px;text-align:center}
+}
+@media (max-width:640px){
+  .concept{font-size:13px;line-height:1.4;padding-top:8px;padding-bottom:8px}
+  .util .wrap{justify-content:space-between;padding-top:0;padding-bottom:0}
+  .util div{width:100%;justify-content:space-between;gap:0}
+  .util a{display:inline-flex;align-items:center;min-height:44px;font-size:15px}
+  header .wrap{padding-top:8px;padding-bottom:8px}
+  .hero .btns .btn{flex:1 1 100%;text-align:center}
+  .hero h1{font-size:36px}
+  .hero p.sub{font-size:19px;margin:18px 0 26px}
+  .welcome .wrap{gap:28px}
+  .welcome .face{flex:none;width:160px}
+  .sec h2,h2{font-size:28px}
+  .news article a{display:inline-block;padding:10px 0}
+  footer a{display:inline-block;padding:9px 0}
+  footer .hl{padding:9px 0}
+  .btn{padding-top:16px;padding-bottom:16px}
+}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add("js")</script>
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="concept"><strong>Design concept by Pixel North, for discussion.</strong> This is not the school's official website. Text and images are placeholders until the school supplies its own.</div>
@@ -179,7 +213,8 @@ footer .credit a{color:var(--sun)}
 <div class="brand">
 <a href="#top"><img class="logo" src="images/school-logo.png" alt="Mobberley C.E. Primary School, home" width="120" height="120"></a>
 </div>
-<nav aria-label="Main">
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" hidden><span class="bars" aria-hidden="true"></span>Menu</button>
+<nav aria-label="Main" id="site-nav">
 <ul>
 <li><a href="#learning">Learning</a></li>
 <li><a href="#parents">Parents</a></li>
@@ -388,6 +423,14 @@ footer .credit a{color:var(--sun)}
     });
   },{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
   els.forEach(function(el){io.observe(el);});
+})();
+</script>
+<script>
+(function(){var b=document.querySelector(".menu-btn"),n=document.getElementById("site-nav");if(!b||!n)return;
+function set(o){n.classList.toggle("open",o);b.setAttribute("aria-expanded",o);}
+b.addEventListener("click",function(){set(b.getAttribute("aria-expanded")!=="true")});
+n.addEventListener("click",function(e){if(e.target.closest("a"))set(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&b.getAttribute("aria-expanded")==="true"){set(false);b.focus()}});
 })();
 </script>
 </body>
