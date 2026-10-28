@@ -174,8 +174,8 @@ footer .credit a{color:var(--sun)}
 }
 @media (max-width:640px){
   .concept{font-size:13px;line-height:1.4;padding-top:8px;padding-bottom:8px}
-  .util .wrap{justify-content:space-between;padding-top:0;padding-bottom:0}
-  .util div{width:100%;justify-content:space-between;gap:0}
+  .util .wrap{justify-content:flex-end;padding-top:0;padding-bottom:0}
+  .util div{width:100%;justify-content:flex-end;gap:0 20px}
   .util a{display:inline-flex;align-items:center;min-height:44px;font-size:15px}
   header .wrap{padding-top:8px;padding-bottom:8px}
   .hero .btns .btn{flex:1 1 100%;text-align:center}
@@ -185,8 +185,10 @@ footer .credit a{color:var(--sun)}
   .welcome .face{flex:none;width:160px}
   .sec h2,h2{font-size:28px}
   .news article a{display:inline-block;padding:10px 0}
-  footer a{display:inline-block;padding:9px 0}
-  footer .hl{padding:9px 0}
+  footer .col p{margin:0;line-height:1.3}
+  footer .col p.h{margin-bottom:6px}
+  footer .col a{display:inline-block;padding:5px 0}
+  footer .cols{gap:24px}
   .btn{padding-top:16px;padding-bottom:16px}
 }
 </style>
