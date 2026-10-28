@@ -146,9 +146,10 @@ footer .credit a{color:var(--sun)}
 @media (prefers-reduced-motion:reduce){nav a{transition:none}.rv{opacity:1;transform:none;transition:none}}
 
 @media (max-width:900px){
-  header .wrap{flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+  header .wrap{flex-wrap:wrap;padding-top:8px;padding-bottom:0}
   .brand .logo{width:96px;height:96px;filter:none}
-  .brand a{margin-bottom:0}
+  .brand a{margin-bottom:-24px}
+  .top:has(nav.open) .brand a{margin-bottom:0}
 }
 @media (max-width:640px){
   .wrap,.concept{padding-left:20px;padding-right:20px}
@@ -178,7 +179,7 @@ footer .credit a{color:var(--sun)}
   .util .wrap{justify-content:flex-end;padding-top:0;padding-bottom:0}
   .util div{width:100%;justify-content:flex-end;gap:0 20px}
   .util a{display:inline-flex;align-items:center;min-height:44px;font-size:15px}
-  header .wrap{padding-top:8px;padding-bottom:8px}
+  header .wrap{padding-top:8px;padding-bottom:0}
   .hero .btns .btn{flex:1 1 100%;text-align:center}
   .hero h1{font-size:36px}
   .hero p.sub{font-size:19px;margin:18px 0 26px}
