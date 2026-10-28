@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>Mobberley C.E. Primary School | Design concept</title>
+<meta name="description" content="A design concept by Pixel North for a new Mobberley C.E. Primary School website. Not the school's official site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B2B5E;--ink:#17224A;--muted:#4A5578;--sun:#FFC93C;--green:#1F6B45;
+  --mist:#EAF2FF;--line:#8FA3E8;--white:#fff;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font:400 18px/1.6 "Nunito Sans",system-ui,sans-serif;color:var(--ink);background:var(--white)}
+h1,h2,h3,.lx{font-family:Lexend,system-ui,sans-serif;margin:0}
+h2{font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.02em}
+p{margin:0}
+a{color:var(--navy)}
+a:hover{color:var(--green)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--sun);color:var(--ink);padding:10px 16px;border-radius:8px;z-index:10}
+.skip:focus{left:8px}
+.wrap{max-width:1296px;margin:0 auto;padding-left:32px;padding-right:32px}
+.sec{padding-top:72px;padding-bottom:72px}
+.row{display:flex;flex-wrap:wrap;gap:20px}
+.eyebrow{font:600 16px Lexend,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.intro{max-width:640px;font-size:19px;color:var(--muted);margin:8px 0 32px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--navy);color:#fff}
+.btn:hover{color:#fff;background:var(--ink)}
+.btn.sun{background:var(--sun);color:var(--ink)}
+.btn.sun:hover{color:var(--ink);background:#FFD86B}
+.btn.ghost{background:transparent;color:#fff;border:2px solid #fff;padding:13px 26px}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.ph{display:grid;place-items:center;text-align:center;padding:24px;border:3px dashed var(--line);color:var(--muted);font-size:16px}
+
+.concept{background:var(--ink);color:#fff;padding:10px 32px;font-size:15px;text-align:center}
+.util{background:var(--mist);font-size:16px}
+.util .wrap{display:flex;flex-wrap:wrap;gap:6px 28px;justify-content:space-between;padding-top:10px;padding-bottom:10px}
+.util div{display:flex;flex-wrap:wrap;gap:6px 22px}
+header .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+.brand .tile{display:grid;place-items:center;width:56px;height:56px;border-radius:14px;background:var(--navy);color:var(--sun);font:800 26px Lexend,sans-serif}
+.brand .name{font:800 22px/1.15 Lexend,sans-serif;letter-spacing:-.01em}
+.brand .name span{display:block;font-weight:600;font-size:16px;color:var(--muted)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+nav a{display:inline-block;padding:10px 14px;text-decoration:none;font-weight:700;color:var(--ink)}
+nav a:hover{color:var(--green)}
+nav a.cta{background:var(--navy);color:#fff;border-radius:999px;padding:12px 22px;margin-left:8px}
+nav a.cta:hover{background:var(--ink);color:#fff}
+
+.hero{background:var(--navy);color:#fff}
+.hero .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
+.hero .copy{flex:1 1 480px;min-width:0}
+.hero .art{flex:1 1 380px;min-width:0}
+.hero .eyebrow{color:var(--sun);margin-bottom:16px}
+.hero h1{font-weight:800;font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:-.03em}
+.hero p.sub{font-size:21px;max-width:560px;color:#E4EBFF;margin:24px 0 32px}
+.hero .btns{display:flex;flex-wrap:wrap;gap:14px}
+.hero .ph{aspect-ratio:4/3;border-radius:28px;background:#2A3F86;border-color:var(--line);color:#E4EBFF}
+
+.quick .card{flex:1 1 340px;display:block;text-decoration:none;color:var(--ink);background:var(--mist);border-radius:20px;padding:24px}
+.quick .card:hover{background:#DCE8FF;color:var(--ink)}
+.quick .sq{display:block;width:14px;height:14px;background:var(--green);margin-bottom:14px}
+.quick .card strong{display:block;font:700 21px Lexend,sans-serif;margin-bottom:6px}
+
+.welcome .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.welcome .face{flex:0 1 360px;width:100%;min-width:0}
+.welcome .face .ph{aspect-ratio:1/1;border-radius:50%;background:var(--mist);max-width:360px}
+.welcome .words{flex:1 1 480px;min-width:0}
+.welcome h2{margin-bottom:16px}
+.welcome p{font-size:19px;margin-bottom:16px}
+.welcome .who{font-weight:700;margin-bottom:20px}
+.welcome .who span{font-weight:400;color:var(--muted)}
+
+.values{background:var(--mist)}
+.values .v{flex:1 1 180px;background:#fff;border-radius:18px;padding:22px;font:800 24px Lexend,sans-serif;color:var(--navy)}
+
+.classes .c{flex:1 1 150px;text-align:center;padding:20px 12px;border-radius:16px;background:var(--sun);color:var(--ink);font:700 19px Lexend,sans-serif;text-decoration:none}
+.classes .c:hover{background:#FFD86B;color:var(--ink)}
+
+.news{background:var(--ink);color:#fff}
+.news h2{margin-bottom:32px}
+.news article{flex:1 1 300px;background:#fff;color:var(--ink);border-radius:20px;padding:28px}
+.news .date{font-size:15px;color:var(--muted);margin-bottom:8px}
+.news h3{font-weight:700;font-size:22px;line-height:1.25;margin-bottom:10px}
+.news article p.t{margin-bottom:16px}
+.news article a{font-weight:700}
+
+.community .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.community .words{flex:1 1 480px;min-width:0}
+.community .art{flex:1 1 380px;min-width:0}
+.community h2{margin-bottom:16px}
+.community p{font-size:19px;margin-bottom:16px}
+.community p.m{color:var(--muted);margin-bottom:0}
+.community .ph{aspect-ratio:4/3;border-radius:28px;background:var(--mist)}
+
+.gov{background:var(--mist)}
+.gov .wrap{display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center;justify-content:space-between;padding-top:56px;padding-bottom:56px}
+.gov .t{flex:1 1 420px}
+.gov h2{font-size:28px;line-height:1.15;letter-spacing:0;margin-bottom:8px}
+.gov p{color:var(--muted)}
+
+.visit{background:var(--sun);color:var(--ink)}
+.visit .wrap{display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center;justify-content:space-between;padding-top:64px;padding-bottom:64px}
+.visit .t{flex:1 1 440px}
+.visit h2{margin-bottom:10px}
+.visit p{font-size:20px}
+
+footer{background:var(--ink);color:#E4EBFF}
+footer .wrap{padding-top:56px;padding-bottom:32px}
+footer .cols{display:flex;flex-wrap:wrap;gap:32px 56px}
+footer .col{flex:1 1 200px}
+footer .col.big{flex:1 1 280px}
+footer .h{font:700 17px Lexend,sans-serif;color:#fff;margin-bottom:10px}
+footer .h.l{font-weight:800;font-size:22px}
+footer a{color:#E4EBFF}
+footer a.hl{color:var(--sun);font-weight:700}
+footer p{margin-bottom:6px}
+footer .credit{margin-top:40px;padding-top:20px;border-top:1px solid #3A4A85;font-size:15px;color:#C9D4F5}
+footer .credit a{color:var(--sun)}
+
+@media (max-width:640px){
+  .wrap,.concept{padding-left:20px;padding-right:20px}
+  .sec{padding-top:56px;padding-bottom:56px}
+  .hero .wrap{padding-top:48px;padding-bottom:48px;gap:32px}
+  nav a.cta{margin-left:0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="concept"><strong>Design concept by Pixel North, for discussion.</strong> This is not the school's official website. Text and images are placeholders until the school supplies its own.</div>
+
+<div class="util">
+<div class="wrap">
+<div>
+<span>Church Lane, Mobberley, Cheshire WA16 7RA</span>
+<a href="tel:01625800920"><strong>01625 800920</strong></a>
+<a href="mailto:admin@mobberley.cheshire.sch.uk">admin@mobberley.cheshire.sch.uk</a>
+</div>
+<div>
+<a href="#parents">Parent login</a>
+<a href="#parents">Term dates</a>
+<a href="#parents">Newsletters</a>
+</div>
+</div>
+</div>
+
+<header>
+<div class="wrap">
+<a class="brand" href="#top" aria-label="Mobberley C.E. Primary School, home">
+<span class="tile" aria-hidden="true">M</span>
+<span class="name">Mobberley<span>Church of England Primary School</span></span>
+</a>
+<nav aria-label="Main">
+<ul>
+<li><a href="#learning">Learning</a></li>
+<li><a href="#parents">Parents</a></li>
+<li><a href="#community">Community</a></li>
+<li><a href="#governance">Governance</a></li>
+<li><a href="#news">News</a></li>
+<li><a class="cta" href="#contact">Contact us</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+<div class="wrap">
+<div class="copy">
+<p class="eyebrow">Reception to Year 6 · Mobberley, Cheshire</p>
+<h1>A village school where every child is known.</h1>
+<p class="sub">Part of village life since 1838. Come and see what a small, caring church school feels like.</p>
+<div class="btns">
+<a class="btn sun" href="#visit">Book a visit</a>
+<a class="btn ghost" href="#parents">Information for parents</a>
+</div>
+</div>
+<div class="art">
+<div class="ph" role="img" aria-label="Placeholder for a photo of the school building or grounds">
+<span><strong class="lx" style="display:block;font-size:18px;margin-bottom:6px">Photo: the school building or grounds</strong>Bright, natural light. No pupil faces without parental consent.</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="quick sec" id="parents">
+<div class="wrap">
+<h2>What parents look for first</h2>
+<p class="intro">The things people search for most, one tap from the homepage.</p>
+<div class="row">
+<a class="card" href="#parents"><span class="sq"></span><strong>Parents' evening</strong>Book your appointment online.</a>
+<a class="card" href="#news"><span class="sq"></span><strong>Newsletters</strong>The latest news from school, in one place.</a>
+<a class="card" href="#parents"><span class="sq"></span><strong>Term dates</strong>[Term dates and inset days]</a>
+<a class="card" href="#news"><span class="sq"></span><strong>School prospectus</strong>For families thinking about joining us.</a>
+<a class="card" href="#contact"><span class="sq"></span><strong>Contact the office</strong>Phone, email and how to find us.</a>
+<a class="card" href="#governance"><span class="sq"></span><strong>Policies and governors</strong>Statutory information, easy to find.</a>
+</div>
+</div>
+</section>
+
+<section class="welcome sec" id="learning">
+<div class="wrap">
+<div class="face">
+<div class="ph" role="img" aria-label="Placeholder for a photo of the headteacher"><span>Photo: the headteacher</span></div>
+</div>
+<div class="words">
+<p class="eyebrow">Welcome</p>
+<h2>Happy, confident, curious.</h2>
+<p>[A short, warm welcome from the headteacher goes here, in the school's own words. Two or three sentences, then a link to the full message.]</p>
+<p class="who">Mr Damien Stenson, Headteacher <span>[school to confirm]</span></p>
+<a class="btn" href="#learning">Read the full welcome</a>
+</div>
+</div>
+</section>
+
+<section class="values sec">
+<div class="wrap">
+<h2>Our Christian values</h2>
+<p class="intro">Six values that shape everyday school life. Each one can link to a short page with real examples from the classroom.</p>
+<div class="row" style="gap:16px">
+<div class="v">Respect</div>
+<div class="v">Perseverance</div>
+<div class="v">Compassion</div>
+<div class="v">Friendship</div>
+<div class="v">Courage</div>
+<div class="v">Honesty</div>
+</div>
+</div>
+</section>
+
+<section class="classes sec">
+<div class="wrap">
+<h2>Find your child's class</h2>
+<p class="intro">Each class page can hold its newsletter, topic overview and reading lists.</p>
+<div class="row" style="gap:14px">
+<a class="c" href="#learning">Reception</a>
+<a class="c" href="#learning">Year 1</a>
+<a class="c" href="#learning">Year 2</a>
+<a class="c" href="#learning">Year 3</a>
+<a class="c" href="#learning">Year 4</a>
+<a class="c" href="#learning">Year 5</a>
+<a class="c" href="#learning">Year 6</a>
+</div>
+</div>
+</section>
+
+<section class="news sec" id="news">
+<div class="wrap">
+<h2>Latest news</h2>
+<div class="row">
+<article>
+<p class="date">[Date]</p>
+<h3>Latest newsletter</h3>
+<p class="t">[One-line summary of the newsletter. The full PDF opens in a new tab and is labelled with its file size.]</p>
+<a href="#news">Read the newsletter</a>
+</article>
+<article>
+<p class="date">[Date]</p>
+<h3>[A story from the classroom]</h3>
+<p class="t">[Two lines about something the children did this week, with a photo only where consent is on file.]</p>
+<a href="#news">Read more</a>
+</article>
+<article>
+<p class="date">[Date]</p>
+<h3>School prospectus</h3>
+<p class="t">[One page to read online or download, instead of a separate link for every page.]</p>
+<a href="#news">Open the prospectus</a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="community sec" id="community">
+<div class="wrap">
+<div class="words">
+<p class="eyebrow">Church and community</p>
+<h2>At the heart of Mobberley.</h2>
+<p>[A short paragraph on the school's link with the parish church, collective worship and village events. School to supply.]</p>
+<p class="m">[Space for the latest SIAMS and Ofsted outcomes, with dates and links to the full reports.]</p>
+</div>
+<div class="art">
+<div class="ph" role="img" aria-label="Placeholder for a photo of the village or church"><span>Photo: the village, church or a community event</span></div>
+</div>
+</div>
+</section>
+
+<section class="gov" id="governance">
+<div class="wrap">
+<div class="t">
+<h2>Policies, governors and statutory information</h2>
+<p>One tidy page for everything schools must publish, grouped and searchable, so nothing is buried.</p>
+</div>
+<a class="btn" href="#governance">See statutory information</a>
+</div>
+</section>
+
+<section class="visit" id="visit">
+<div class="wrap">
+<div class="t">
+<h2>Thinking about Reception?</h2>
+<p>[Open morning date and time]. Come and meet the team, see the classrooms and ask anything.</p>
+</div>
+<a class="btn" href="#contact">Ask about a visit</a>
+</div>
+</section>
+
+</main>
+
+<footer id="contact">
+<div class="wrap">
+<div class="cols">
+<div class="col big">
+<p class="h l">Mobberley C.E. Primary School</p>
+<p>Church Lane, Mobberley, Cheshire WA16 7RA</p>
+<p style="margin-top:10px"><a class="hl" href="tel:01625800920">01625 800920</a></p>
+<p><a class="hl" style="font-weight:400" href="mailto:admin@mobberley.cheshire.sch.uk">admin@mobberley.cheshire.sch.uk</a></p>
+</div>
+<div class="col">
+<p class="h">Quick links</p>
+<p><a href="#parents">Parents</a></p>
+<p><a href="#news">News and newsletters</a></p>
+<p><a href="#governance">Governance</a></p>
+<p><a href="#community">Community</a></p>
+</div>
+<div class="col">
+<p class="h">The small print</p>
+<p><a href="#contact">Privacy notice</a></p>
+<p><a href="#contact">Cookie policy</a></p>
+<p><a href="#contact">Accessibility statement</a></p>
+<p><a href="#contact">Safeguarding</a></p>
+</div>
+</div>
+<p class="credit">Design concept by <a href="https://pixel-north.co.uk/">Pixel North</a>. Small business sites, sorted.</p>
+</div>
+</footer>
+
+</body>
+</html>
