@@ -9,29 +9,29 @@
 <meta name="description" content="A design concept by Pixel North for a new Mobberley C.E. Primary School website. Not the school's official site.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#1B2B5E;--ink:#17224A;--muted:#4A5578;--sun:#FFC93C;--green:#1F6B45;
+  --navy:#1B2B5E;--ink:#17224A;--muted:#4A5578;--sun:#FFC93C;
   --mist:#EAF2FF;--line:#8FA3E8;--white:#fff;
   color-scheme:light;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;font:400 18px/1.6 "Nunito Sans",system-ui,sans-serif;color:var(--ink);background:var(--white)}
-h1,h2,h3,.lx{font-family:Lexend,system-ui,sans-serif;margin:0}
-h2{font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.02em}
+body{margin:0;font:400 18px/1.6 "Open Sans",system-ui,sans-serif;color:var(--ink);background:var(--white)}
+h1,h2,h3,.lx{font-weight:700;font-family:Arvo,Georgia,serif;margin:0}
+h2{font-weight:700;font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:0}
 p{margin:0}
 a{color:var(--navy)}
-a:hover{color:var(--green)}
-:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+a:hover{color:var(--ink);text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
 .skip{position:absolute;left:-999px;top:8px;background:var(--sun);color:var(--ink);padding:10px 16px;border-radius:8px;z-index:10}
 .skip:focus{left:8px}
 .wrap{max-width:1296px;margin:0 auto;padding-left:32px;padding-right:32px}
 .sec{padding-top:72px;padding-bottom:72px}
 .row{display:flex;flex-wrap:wrap;gap:20px}
-.eyebrow{font:600 16px Lexend,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.eyebrow{font:700 15px Arvo,Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin-bottom:12px}
 .intro{max-width:640px;font-size:19px;color:var(--muted);margin:8px 0 32px}
 .btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--navy);color:#fff}
 .btn:hover{color:#fff;background:var(--ink)}
@@ -46,13 +46,13 @@ a:hover{color:var(--green)}
 .util .wrap{display:flex;flex-wrap:wrap;gap:6px 28px;justify-content:space-between;padding-top:10px;padding-bottom:10px}
 .util div{display:flex;flex-wrap:wrap;gap:6px 22px}
 header .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px}
-.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
-.brand .tile{display:grid;place-items:center;width:56px;height:56px;border-radius:14px;background:var(--navy);color:var(--sun);font:800 26px Lexend,sans-serif}
-.brand .name{font:800 22px/1.15 Lexend,sans-serif;letter-spacing:-.01em}
-.brand .name span{display:block;font-weight:600;font-size:16px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px}
+.brand a{display:block;flex:none;line-height:0}
+.brand .logo{width:84px;height:84px;display:block}
+.vals{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 16px;max-width:340px;font:700 15px/1.5 Arvo,Georgia,serif;color:var(--navy)}
 nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 nav a{display:inline-block;padding:10px 14px;text-decoration:none;font-weight:700;color:var(--ink)}
-nav a:hover{color:var(--green)}
+nav a:hover{color:var(--ink);text-decoration-thickness:2px}
 nav a.cta{background:var(--navy);color:#fff;border-radius:999px;padding:12px 22px;margin-left:8px}
 nav a.cta:hover{background:var(--ink);color:#fff}
 
@@ -61,15 +61,15 @@ nav a.cta:hover{background:var(--ink);color:#fff}
 .hero .copy{flex:1 1 480px;min-width:0}
 .hero .art{flex:1 1 380px;min-width:0}
 .hero .eyebrow{color:var(--sun);margin-bottom:16px}
-.hero h1{font-weight:800;font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:-.03em}
+.hero h1{font-weight:700;font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:0}
 .hero p.sub{font-size:21px;max-width:560px;color:#E4EBFF;margin:24px 0 32px}
 .hero .btns{display:flex;flex-wrap:wrap;gap:14px}
 .hero .ph{aspect-ratio:4/3;border-radius:28px;background:#2A3F86;border-color:var(--line);color:#E4EBFF}
 
 .quick .card{flex:1 1 340px;display:block;text-decoration:none;color:var(--ink);background:var(--mist);border-radius:20px;padding:24px}
 .quick .card:hover{background:#DCE8FF;color:var(--ink)}
-.quick .sq{display:block;width:14px;height:14px;background:var(--green);margin-bottom:14px}
-.quick .card strong{display:block;font:700 21px Lexend,sans-serif;margin-bottom:6px}
+.quick .sq{display:block;width:14px;height:14px;background:var(--sun);margin-bottom:14px}
+.quick .card strong{display:block;font:700 21px Arvo,Georgia,serif;margin-bottom:6px}
 
 .welcome .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
 .welcome .face{flex:0 1 360px;width:100%;min-width:0}
@@ -81,9 +81,9 @@ nav a.cta:hover{background:var(--ink);color:#fff}
 .welcome .who span{font-weight:400;color:var(--muted)}
 
 .values{background:var(--mist)}
-.values .v{flex:1 1 180px;background:#fff;border-radius:18px;padding:22px;font:800 24px Lexend,sans-serif;color:var(--navy)}
+.values .v{flex:1 1 180px;background:#fff;border-radius:18px;padding:22px;font:700 24px Arvo,Georgia,serif;color:var(--navy)}
 
-.classes .c{flex:1 1 150px;text-align:center;padding:20px 12px;border-radius:16px;background:var(--sun);color:var(--ink);font:700 19px Lexend,sans-serif;text-decoration:none}
+.classes .c{flex:1 1 150px;text-align:center;padding:20px 12px;border-radius:16px;background:var(--sun);color:var(--ink);font:700 19px Arvo,Georgia,serif;text-decoration:none}
 .classes .c:hover{background:#FFD86B;color:var(--ink)}
 
 .news{background:var(--ink);color:#fff}
@@ -119,8 +119,8 @@ footer .wrap{padding-top:56px;padding-bottom:32px}
 footer .cols{display:flex;flex-wrap:wrap;gap:32px 56px}
 footer .col{flex:1 1 200px}
 footer .col.big{flex:1 1 280px}
-footer .h{font:700 17px Lexend,sans-serif;color:#fff;margin-bottom:10px}
-footer .h.l{font-weight:800;font-size:22px}
+footer .h{font:700 17px Arvo,Georgia,serif;color:#fff;margin-bottom:10px}
+footer .h.l{font-weight:700;font-size:22px}
 footer a{color:#E4EBFF}
 footer a.hl{color:var(--sun);font-weight:700}
 footer p{margin-bottom:6px}
@@ -157,10 +157,12 @@ footer .credit a{color:var(--sun)}
 
 <header>
 <div class="wrap">
-<a class="brand" href="#top" aria-label="Mobberley C.E. Primary School, home">
-<span class="tile" aria-hidden="true">M</span>
-<span class="name">Mobberley<span>Church of England Primary School</span></span>
-</a>
+<div class="brand">
+<a href="#top"><img class="logo" src="images/school-logo.png" alt="Mobberley C.E. Primary School, home" width="84" height="84"></a>
+<ul class="vals" aria-label="Our values">
+<li>Perseverance</li><li>Honesty</li><li>Respect</li><li>Compassion</li><li>Friendship</li><li>Courage</li>
+</ul>
+</div>
 <nav aria-label="Main">
 <ul>
 <li><a href="#learning">Learning</a></li>
