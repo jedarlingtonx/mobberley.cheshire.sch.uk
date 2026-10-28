@@ -30,6 +30,7 @@ a:hover{color:var(--ink);text-decoration-thickness:2px}
 .skip:focus{left:8px}
 .wrap{max-width:1296px;margin:0 auto;padding-left:32px;padding-right:32px}
 .sec{padding-top:72px;padding-bottom:72px}
+.welcome.sec{padding-bottom:24px}
 .row{display:flex;flex-wrap:wrap;gap:20px}
 .eyebrow{font:700 15px Arvo,Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin-bottom:12px}
 .intro{max-width:640px;font-size:19px;color:var(--muted);margin:8px 0 32px}
@@ -43,12 +44,12 @@ a:hover{color:var(--ink);text-decoration-thickness:2px}
 
 .concept{background:var(--ink);color:#fff;padding:10px 32px;font-size:15px;text-align:center}
 .util{background:var(--mist);font-size:16px}
-.util .wrap{display:flex;flex-wrap:wrap;gap:6px 28px;justify-content:space-between;padding-top:10px;padding-bottom:10px}
+.util .wrap{display:flex;flex-wrap:wrap;gap:6px 28px;justify-content:flex-end;padding-top:10px;padding-bottom:10px}
 .util div{display:flex;flex-wrap:wrap;gap:6px 22px}
 header .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px}
 .brand{display:flex;align-items:center;gap:16px}
 .brand a{display:block;flex:none;line-height:0}
-.brand .logo{width:84px;height:84px;display:block}
+.brand .logo{width:120px;height:120px;display:block}
 .vals{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 16px;max-width:340px;font:700 15px/1.5 Arvo,Georgia,serif;color:var(--navy)}
 nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 nav a{display:inline-block;padding:10px 14px;text-decoration:none;font-weight:700;color:var(--ink)}
@@ -124,10 +125,12 @@ footer .h.l{font-weight:700;font-size:22px}
 footer a{color:#E4EBFF}
 footer a.hl{color:var(--sun);font-weight:700}
 footer p{margin-bottom:6px}
-footer .credit{margin-top:40px;padding-top:20px;border-top:1px solid #3A4A85;font-size:15px;color:#C9D4F5}
+footer .credit{display:flex;align-items:center;gap:10px;margin-top:40px;padding-top:20px;border-top:1px solid #3A4A85;font-size:15px;color:#C9D4F5}
 footer .credit a{color:var(--sun)}
+.factory{width:26px;height:26px;flex:none;fill:none;stroke:var(--sun);stroke-width:26;stroke-linecap:butt;stroke-linejoin:miter}
 
 @media (max-width:640px){
+  .brand .logo{width:96px;height:96px}
   .wrap,.concept{padding-left:20px;padding-right:20px}
   .sec{padding-top:56px;padding-bottom:56px}
   .hero .wrap{padding-top:48px;padding-bottom:48px;gap:32px}
@@ -143,11 +146,6 @@ footer .credit a{color:var(--sun)}
 <div class="util">
 <div class="wrap">
 <div>
-<span>Church Lane, Mobberley, Cheshire WA16 7RA</span>
-<a href="tel:01625800920"><strong>01625 800920</strong></a>
-<a href="mailto:admin@mobberley.cheshire.sch.uk">admin@mobberley.cheshire.sch.uk</a>
-</div>
-<div>
 <a href="#parents">Parent login</a>
 <a href="#parents">Term dates</a>
 <a href="#parents">Newsletters</a>
@@ -158,7 +156,7 @@ footer .credit a{color:var(--sun)}
 <header>
 <div class="wrap">
 <div class="brand">
-<a href="#top"><img class="logo" src="images/school-logo.png" alt="Mobberley C.E. Primary School, home" width="84" height="84"></a>
+<a href="#top"><img class="logo" src="images/school-logo.png" alt="Mobberley C.E. Primary School, home" width="120" height="120"></a>
 <ul class="vals" aria-label="Our values">
 <li>Perseverance</li><li>Honesty</li><li>Respect</li><li>Compassion</li><li>Friendship</li><li>Courage</li>
 </ul>
@@ -197,21 +195,6 @@ footer .credit a{color:var(--sun)}
 </div>
 </section>
 
-<section class="quick sec" id="parents">
-<div class="wrap">
-<h2>What parents look for first</h2>
-<p class="intro">The things people search for most, one tap from the homepage.</p>
-<div class="row">
-<a class="card" href="#parents"><span class="sq"></span><strong>Parents' evening</strong>Book your appointment online.</a>
-<a class="card" href="#news"><span class="sq"></span><strong>Newsletters</strong>The latest news from school, in one place.</a>
-<a class="card" href="#parents"><span class="sq"></span><strong>Term dates</strong>[Term dates and inset days]</a>
-<a class="card" href="#news"><span class="sq"></span><strong>School prospectus</strong>For families thinking about joining us.</a>
-<a class="card" href="#contact"><span class="sq"></span><strong>Contact the office</strong>Phone, email and how to find us.</a>
-<a class="card" href="#governance"><span class="sq"></span><strong>Policies and governors</strong>Statutory information, easy to find.</a>
-</div>
-</div>
-</section>
-
 <section class="welcome sec" id="learning">
 <div class="wrap">
 <div class="face">
@@ -223,6 +206,21 @@ footer .credit a{color:var(--sun)}
 <p>[A short, warm welcome from the headteacher goes here, in the school's own words. Two or three sentences, then a link to the full message.]</p>
 <p class="who">Mr Damien Stenson, Headteacher <span>[school to confirm]</span></p>
 <a class="btn" href="#learning">Read the full welcome</a>
+</div>
+</div>
+</section>
+
+<section class="quick sec" id="parents">
+<div class="wrap">
+<h2>What parents look for first</h2>
+<p class="intro">The things people search for most, one tap from the homepage.</p>
+<div class="row">
+<a class="card" href="#parents"><span class="sq"></span><strong>Parents' evening</strong>Book your appointment online.</a>
+<a class="card" href="#news"><span class="sq"></span><strong>Newsletters</strong>The latest news from school, in one place.</a>
+<a class="card" href="#parents"><span class="sq"></span><strong>Term dates</strong>[Term dates and inset days]</a>
+<a class="card" href="#news"><span class="sq"></span><strong>School prospectus</strong>For families thinking about joining us.</a>
+<a class="card" href="#contact"><span class="sq"></span><strong>Contact the office</strong>Phone, email and how to find us.</a>
+<a class="card" href="#governance"><span class="sq"></span><strong>Policies and governors</strong>Statutory information, easy to find.</a>
 </div>
 </div>
 </section>
@@ -344,7 +342,7 @@ footer .credit a{color:var(--sun)}
 <p><a href="#contact">Safeguarding</a></p>
 </div>
 </div>
-<p class="credit">Design concept by <a href="https://pixel-north.co.uk/">Pixel North</a>. Small business sites, sorted.</p>
+<p class="credit"><svg class="factory" viewBox="0 0 512 512" aria-hidden="true"><path d="M30 464H480"/><path d="M70 464V268L195 205V268L325 205V268L445 205V464"/><path d="M347 250L359 45H413L425 205"/><path d="M362 78H410"/><rect x="120" y="318" width="64" height="64"/><rect x="226" y="318" width="64" height="64"/><rect x="331" y="318" width="64" height="64"/></svg><span>Another small business site, sorted, by <a href="https://pixel-north.co.uk/">Pixel North</a>.</span></p>
 </div>
 </footer>
 
