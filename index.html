@@ -55,15 +55,13 @@ nav a:hover{color:var(--ink);text-decoration-thickness:2px}
 nav a.cta{background:var(--navy);color:#fff;border-radius:999px;padding:12px 22px;margin-left:8px}
 nav a.cta:hover{background:var(--ink);color:#fff}
 
-.hero{background:var(--navy);color:#fff}
-.hero .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
-.hero .copy{flex:1 1 480px;min-width:0}
-.hero .art{flex:1 1 380px;min-width:0}
+.hero{color:#fff;background-color:var(--navy);background-image:linear-gradient(90deg,rgba(27,43,94,.96) 0%,rgba(27,43,94,.9) 36%,rgba(27,43,94,.58) 54%,rgba(27,43,94,0) 78%),url(images/hero.jpg);background-size:cover;background-position:100% 6%}
+.hero .wrap{display:flex;align-items:center;min-height:clamp(620px,40vw,780px);padding-top:96px;padding-bottom:96px}
+.hero .copy{flex:0 1 640px;min-width:0}
 .hero .eyebrow{color:var(--sun);margin-bottom:16px}
 .hero h1{font-weight:700;font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:0}
 .hero p.sub{font-size:21px;max-width:560px;color:#E4EBFF;margin:24px 0 32px}
 .hero .btns{display:flex;flex-wrap:wrap;gap:14px}
-.hero .ph{aspect-ratio:4/3;border-radius:28px;background:#2A3F86;border-color:var(--line);color:#E4EBFF}
 
 .quick{background:#FFF3CC}
 .quick .card{flex:1 1 340px;display:block;text-decoration:none;color:var(--ink);background:#fff;border:1px solid #F0DFA0;border-radius:20px;padding:24px}
@@ -82,7 +80,18 @@ nav a.cta:hover{background:var(--ink);color:#fff}
 .welcome .who span{font-weight:400;color:var(--muted)}
 
 .values{background:var(--mist)}
-.values .v{flex:1 1 180px;background:#fff;border-radius:18px;padding:22px;font:700 24px Arvo,Georgia,serif;color:var(--navy)}
+.values .opens{gap:18px}
+.open{flex:1 1 260px;margin:0;border-radius:24px;padding:28px 32px;font:700 clamp(34px,4.4vw,52px)/1.05 Arvo,Georgia,serif}
+.open span{display:block;font:700 15px Arvo,Georgia,serif;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.open.a{background:var(--navy);color:#fff}
+.open.a span{color:var(--sun)}
+.open.b{background:var(--sun);color:var(--ink)}
+.open.c{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.verse{margin:28px 0 24px;font:700 20px Arvo,Georgia,serif;color:var(--navy)}
+.verse strong{font-weight:700;background:var(--sun);padding:3px 10px;border-radius:6px;margin-right:6px}
+.vrow{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+.vrow li{display:flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:12px 24px;font:700 20px Arvo,Georgia,serif;color:var(--navy)}
+.vrow li::before{content:"";width:10px;height:10px;background:var(--sun);border:2px solid var(--navy);border-radius:50%;box-sizing:content-box}
 
 .classes .c{flex:1 1 150px;text-align:center;padding:20px 12px;border-radius:16px;background:var(--sun);color:var(--ink);font:700 19px Arvo,Georgia,serif;text-decoration:none}
 .classes .c:hover{background:#FFD86B;color:var(--ink)}
@@ -137,7 +146,8 @@ footer .credit a{color:var(--sun)}
   .brand .logo{width:96px;height:96px}
   .wrap,.concept{padding-left:20px;padding-right:20px}
   .sec{padding-top:56px;padding-bottom:56px}
-  .hero .wrap{padding-top:48px;padding-bottom:48px;gap:32px}
+  .hero{background-image:linear-gradient(180deg,rgba(27,43,94,.94) 0%,rgba(27,43,94,.86) 100%),url(images/hero.jpg);background-position:70% center}
+  .hero .wrap{min-height:0;padding-top:56px;padding-bottom:56px}
   nav a.cta{margin-left:0}
 }
 </style>
@@ -188,11 +198,6 @@ footer .credit a{color:var(--sun)}
 <a class="btn ghost" href="#parents">Information for parents</a>
 </div>
 </div>
-<div class="art">
-<div class="ph" role="img" aria-label="Placeholder for a photo of the school building or grounds">
-<span><strong class="lx" style="display:block;font-size:18px;margin-bottom:6px">Photo: the school building or grounds</strong>Bright, natural light. No pupil faces without parental consent.</span>
-</div>
-</div>
 </div>
 </section>
 
@@ -229,15 +234,16 @@ footer .credit a{color:var(--sun)}
 <section class="values sec">
 <div class="wrap">
 <h2>Our Christian values</h2>
-<p class="intro">Six values that shape everyday school life. Each one can link to a short page with real examples from the classroom.</p>
-<div class="row" style="gap:16px">
-<div class="v">Respect</div>
-<div class="v">Perseverance</div>
-<div class="v">Compassion</div>
-<div class="v">Friendship</div>
-<div class="v">Courage</div>
-<div class="v">Honesty</div>
+<p class="intro">Everything we do is built on three ideas.</p>
+<div class="row opens">
+<p class="open a"><span>Open</span>Hearts</p>
+<p class="open b"><span>Open</span>Minds</p>
+<p class="open c"><span>Open</span>Doors</p>
 </div>
+<p class="verse"><strong>Matthew 7:7</strong> &middot; Ask, seek, knock.</p>
+<ul class="vrow" aria-label="Our six values">
+<li>Perseverance</li><li>Honesty</li><li>Respect</li><li>Compassion</li><li>Friendship</li><li>Courage</li>
+</ul>
 </div>
 </section>
 
